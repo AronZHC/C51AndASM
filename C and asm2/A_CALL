@@ -1,0 +1,26 @@
+NAME A_CALL
+    ?PR?A_call?A_CALL SEGMENT CODE
+    ?DT?A_call?A_CALL SEGMENT DATA OVERLAYABLE
+    ?BI?A_call?A_CALL SEGMENT BIT  OVERLAYABLE
+         EXTERN CODE (_cfunc)                            ;接下来这几段的意义值得思考
+         EXTERN DATA (?_cfunc?BYTE)
+         EXTERN BIT  (?_cfunc?BIT)
+         PUBLIC A_call                                  ;声明公共函数
+             
+ RSEG ?DT?A_call?A_CALL ;可覆盖局部数据段
+     ?A_call?BYTE:     ;起始地址
+     v_a?040:  DS  2     ;int  DS后的参数代表该变量的字节数，定义传递参数字符
+     v_b?041:  DS  1     ;char
+     v_d?043:  DS  4     ;long
+   A_ret?045:  DS  4     ;long  定义其它局部变量
+      RSEG ?BI?A_call?A_CALL ;可覆盖局部位段
+          ？A_call？BIT：
+              v_c?042: DBIT  1
+              v_e?044: DBIT  1
+                  
+           RSEG ?PR?A_call?A_CALL ;程序代码段
+               A_call:
+                      USING 0
+               MOV C,v_c?042
+               MOV ?_cfunc?BIT,C
+               

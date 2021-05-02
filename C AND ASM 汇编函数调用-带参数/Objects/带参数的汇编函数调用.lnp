@@ -1,0 +1,6 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\example.obj" 
+TO ".\Objects\带参数的汇编函数调用" 
+
+PRINT(".\Listings\带参数的汇编函数调用.map")

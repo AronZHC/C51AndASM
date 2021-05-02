@@ -1,0 +1,6 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\asmtest.obj" 
+TO ".\Objects\c _and_asm" 
+
+PRINT(".\Listings\c _and_asm.map")

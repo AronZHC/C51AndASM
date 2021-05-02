@@ -1,0 +1,55 @@
+; .\Objects\main.SRC generated from: main.c
+; COMPILER INVOKED BY:
+;        I:\[20200615]KeilC51\C51\BIN\C51.EXE main.c OMF2 ROM(SMALL) OPTIMIZE(8,SPEED) BROWSE DEBUG PRINT(.\Listings\main.lst) TABS(2) SRC(.\Objects\main.SRC)
+
+
+NAME	MAIN
+
+?PR?_example?MAIN    SEGMENT CODE INBLOCK 
+?PR?main?MAIN        SEGMENT CODE INBLOCK 
+	EXTRN	CODE (?C_STARTUP)
+	PUBLIC	main
+	PUBLIC	_example
+; unsigned int example(unsigned char i)
+
+	RSEG  ?PR?_example?MAIN
+_example:
+	USING	0
+			; SOURCE LINE # 1
+;---- Variable 'i?040' assigned to Register 'R7' ----
+; {return i*i;}
+			; SOURCE LINE # 2
+	MOV  	A,R7
+	MOV  	B,A
+	MUL  	AB
+	MOV  	R7,A
+	MOV  	R6,B
+	RET  	
+; END OF _example
+
+; 
+; main()
+
+	RSEG  ?PR?main?MAIN
+main:
+	USING	0
+			; SOURCE LINE # 4
+; {
+			; SOURCE LINE # 5
+; example(80);
+			; SOURCE LINE # 6
+	MOV  	R7,#050H
+	ACALL	_example
+;     #pragma asm
+;     DJNZ R7,$
+	  DJNZ R7,$
+;     DJNZ R6,$
+	  DJNZ R6,$
+?C0002:
+;     #pragma endasm
+;     while(1);   
+			; SOURCE LINE # 11
+	SJMP 	?C0002
+; END OF main
+
+	END

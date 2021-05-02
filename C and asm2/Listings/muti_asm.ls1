@@ -1,0 +1,603 @@
+AX51 MACRO ASSEMBLER  MUTI_ASM                                                              11/06/17 16:14:47 PAGE     1
+
+
+MACRO ASSEMBLER AX51 V3.15.0.0
+OBJECT MODULE PLACED IN .\Objects\muti_asm.OBJ
+ASSEMBLER INVOKED BY: G:\Keil_v5\C51\BIN\AX51.EXE .\Objects\muti_asm.src PR(.\Listings\muti_asm.ls1) EP DEBUG
+
+LOC    OBJ             LINE     SOURCE
+
+                          1     ; .\Objects\muti_asm.SRC generated from: muti_asm.c
+
+                          2     ; COMPILER INVOKED BY:
+
+                          3     ;        G:\Keil_v5\C51\BIN\C51.EXE muti_asm.c OMF2 OPTIMIZE(8,SPEED) BROWSE DEBUG PRINT
+                               (.\Listings\muti_asm.lst) SRC(.\Objects\muti_asm.SRC)
+
+                          4     
+
+                          5     $nomod51 
+
+                          6     
+
+                          7     NAME    MUTI_ASM
+
+                          8     
+
+ 0080                     9     P0      DATA    080H
+
+ 0090                    10     P1      DATA    090H
+
+ 00A0                    11     P2      DATA    0A0H
+
+ 00B0                    12     P3      DATA    0B0H
+
+ 00B0.4                  13     T0      BIT     0B0H.4
+
+ 00D0.6                  14     AC      BIT     0D0H.6
+
+ 00B0.5                  15     T1      BIT     0B0H.5
+
+ 0090.0                  16     T2      BIT     090H.0
+
+ 00A8.7                  17     EA      BIT     0A8H.7
+
+ 00A8                    18     IE      DATA    0A8H
+
+ 00C8.6                  19     EXF2    BIT     0C8H.6
+
+ 00B0.7                  20     RD      BIT     0B0H.7
+
+ 00A8.4                  21     ES      BIT     0A8H.4
+
+ 00B8                    22     IP      DATA    0B8H
+
+ 0098.0                  23     RI      BIT     098H.0
+
+ 00B0.2                  24     INT0    BIT     0B0H.2
+
+ 00D0.7                  25     CY      BIT     0D0H.7
+
+ 0098.1                  26     TI      BIT     098H.1
+
+ 00B0.3                  27     INT1    BIT     0B0H.3
+
+ 00CB                    28     RCAP2H  DATA    0CBH
+
+ 00B8.4                  29     PS      BIT     0B8H.4
+
+ 0081                    30     SP      DATA    081H
+
+ 0090.1                  31     T2EX    BIT     090H.1
+
+ 00D0.2                  32     OV      BIT     0D0H.2
+
+ 00CA                    33     RCAP2L  DATA    0CAH
+
+ 00C8.1                  34     C_T2    BIT     0C8H.1
+
+ 00B0.6                  35     WR      BIT     0B0H.6
+
+ 00C8.5                  36     RCLK    BIT     0C8H.5
+
+ 00C8.4                  37     TCLK    BIT     0C8H.4
+
+ 0099                    38     SBUF    DATA    099H
+
+ 0087                    39     PCON    DATA    087H
+
+ 0098                    40     SCON    DATA    098H
+
+ 0089                    41     TMOD    DATA    089H
+
+ 0088                    42     TCON    DATA    088H
+
+ 0088.1                  43     IE0     BIT     088H.1
+
+ 0088.3                  44     IE1     BIT     088H.3
+
+ 00F0                    45     B       DATA    0F0H
+
+ 00C8.0                  46     CP_RL2  BIT     0C8H.0
+
+ 00E0                    47     ACC     DATA    0E0H
+
+ 00A8.1                  48     ET0     BIT     0A8H.1
+
+ 00A8.3                  49     ET1     BIT     0A8H.3
+
+ 0088.5                  50     TF0     BIT     088H.5
+
+ 00A8.5                  51     ET2     BIT     0A8H.5
+
+ 0088.7                  52     TF1     BIT     088H.7
+
+ 00C8.7                  53     TF2     BIT     0C8H.7
+
+ 0098.2                  54     RB8     BIT     098H.2
+
+ 008C                    55     TH0     DATA    08CH
+
+ 00A8.0                  56     EX0     BIT     0A8H.0
+
+ 0088.0                  57     IT0     BIT     088H.0
+
+AX51 MACRO ASSEMBLER  MUTI_ASM                                                              11/06/17 16:14:47 PAGE     2
+
+ 008D                    58     TH1     DATA    08DH
+
+ 0098.3                  59     TB8     BIT     098H.3
+
+ 00A8.2                  60     EX1     BIT     0A8H.2
+
+ 0088.2                  61     IT1     BIT     088H.2
+
+ 00CD                    62     TH2     DATA    0CDH
+
+ 00D0.0                  63     P       BIT     0D0H.0
+
+ 0098.7                  64     SM0     BIT     098H.7
+
+ 008A                    65     TL0     DATA    08AH
+
+ 0098.6                  66     SM1     BIT     098H.6
+
+ 008B                    67     TL1     DATA    08BH
+
+ 0098.5                  68     SM2     BIT     098H.5
+
+ 00CC                    69     TL2     DATA    0CCH
+
+ 00B8.1                  70     PT0     BIT     0B8H.1
+
+ 00B8.3                  71     PT1     BIT     0B8H.3
+
+ 00D0.3                  72     RS0     BIT     0D0H.3
+
+ 00B8.5                  73     PT2     BIT     0B8H.5
+
+ 0088.4                  74     TR0     BIT     088H.4
+
+ 00D0.4                  75     RS1     BIT     0D0H.4
+
+ 0088.6                  76     TR1     BIT     088H.6
+
+ 00C8.2                  77     TR2     BIT     0C8H.2
+
+ 00B8.0                  78     PX0     BIT     0B8H.0
+
+ 00B8.2                  79     PX1     BIT     0B8H.2
+
+ 0083                    80     DPH     DATA    083H
+
+ 0082                    81     DPL     DATA    082H
+
+ 00C8.3                  82     EXEN2   BIT     0C8H.3
+
+ 0098.4                  83     REN     BIT     098H.4
+
+ 00C8                    84     T2CON   DATA    0C8H
+
+ 00B0.0                  85     RXD     BIT     0B0H.0
+
+ 00B0.1                  86     TXD     BIT     0B0H.1
+
+ 00D0.5                  87     F0      BIT     0D0H.5
+
+ 00D0                    88     PSW     DATA    0D0H
+
+------                   89     ?PR?main?MUTI_ASM    SEGMENT CODE 
+
+------                   90     ?DT?main?MUTI_ASM    SEGMENT DATA OVERLAYABLE
+
+------                   91     ?CO?MUTI_ASM         SEGMENT CONST 
+
+------                   92     ?BI?MUTI_ASM         SEGMENT BIT 
+
+                         93             EXTRN   CODE (_printf)
+
+                         94             EXTRN   DATA (?_printf?BYTE)
+
+                         95             EXTRN   CODE (_asm)
+
+                         96             EXTRN   CODE (getchar)
+
+                         97             EXTRN   CODE (?C_STARTUP)
+
+                         98             PUBLIC  VAL
+
+                         99             PUBLIC  main
+
+                        100     
+
+------                  101             RSEG  ?DT?main?MUTI_ASM
+
+000000                  102     ?main?BYTE:
+
+000000                  103             out?040:   DS   1
+
+000001                  104             ORG  1
+
+000001                  105          direct?041:   DS   1
+
+000002                  106             ORG  2
+
+000002                  107             key?042:   DS   1
+
+                        108     
+
+------                  109             RSEG  ?BI?MUTI_ASM
+
+0000.0                  110                 VAL:   DBIT   1
+
+                        111     
+
+------                  112             RSEG  ?CO?MUTI_ASM
+
+000000                  113     ?SC_0:
+
+000000 52696768         114             DB  'R' ,'i' ,'g' ,'h' ,'t' ,' ' ,'r' ,'o' ,'t' ,'a' 
+
+000004 7420726F                 
+000008 7461                     
+00000A 74650A00         115             DB  't' ,'e' ,00AH,000H
+
+                        116     
+
+00000E                  117     ?SC_14:
+
+00000E 4C656674         118             DB  'L' ,'e' ,'f' ,'t' ,' ' ,'r' ,'o' ,'t' ,'a' ,'t' 
+
+000012 20726F74                 
+000016 6174                     
+000018 650A00           119             DB  'e' ,00AH,000H
+
+AX51 MACRO ASSEMBLER  MUTI_ASM                                                              11/06/17 16:14:47 PAGE     3
+
+                        120     
+
+00001B                  121     ?SC_27:
+
+00001B 2562780A         122             DB  '%' ,'b' ,'x' ,00AH,000H
+
+00001F 00                       
+                        123     
+
+                        124     
+
+------                  125             RSEG ?CO?MUTI_ASM
+
+                        126     ; #include <REG52.H>
+
+                        127     ; #include <stdio.h>
+
+                        128     ; extern char asm(char c,char b);
+
+                        129     ; bit VAL;
+
+                        130     ; void main (void)
+
+                        131     
+
+------                  132             RSEG  ?PR?main?MUTI_ASM
+
+000000                  133     main:
+
+                        134             USING   0
+
+                        135                             ; SOURCE LINE # 5
+
+                        136     ; {
+
+                        137                             ; SOURCE LINE # 6
+
+                        138     ;     char out=0x49;
+
+                        139                             ; SOURCE LINE # 7
+
+000000 750049     F     140             MOV     out?040,#049H
+
+                        141     ;     char direct;
+
+                        142     ;     char key;
+
+                        143     ;     SCON  = 0x50;/* SCON: mode 1, 8-bit UART, enable rcvr */
+
+                        144                             ; SOURCE LINE # 10
+
+000003 759850           145             MOV     SCON,#050H
+
+                        146     ;                  //10Î»Òì²½½ÓÊÕÆ÷£¬¿É±ä¡£REN=1£¬ÔÊÐí½ÓÊÕÊ¾Ý
+
+                        147     ;     TMOD |= 0x20;/* TMOD: timer 1, mode 2, 8-bit reload */
+
+                        148                             ; SOURCE LINE # 12
+
+000006 438920           149             ORL     TMOD,#020H
+
+                        150     ;                  //¶¨Ê±Æ÷1¹¤×÷ÓÚÄ£Ê½2
+
+                        151     ;     TH1   = 0xfd;/* TH1: reload value for 9600 baud @ 11.0592MHz */
+
+                        152                             ; SOURCE LINE # 14
+
+000009 758DFD           153             MOV     TH1,#0FDH
+
+                        154     ;     TR1   = 1;   /* TR1: timer 1 run */
+
+                        155                             ; SOURCE LINE # 15
+
+00000C D28E             156             SETB    TR1
+
+                        157     ;     TI    = 1;   /* TI: set TI to send first char of UART */
+
+                        158                             ; SOURCE LINE # 16
+
+00000E D299             159             SETB    TI
+
+                        160     ;     VAL   = 0;
+
+                        161                             ; SOURCE LINE # 17
+
+000010 C200       F     162             CLR     VAL
+
+000012                  163     ?C0001:
+
+                        164     ;     while (1)
+
+                        165                             ; SOURCE LINE # 18
+
+                        166     ;     {
+
+                        167                             ; SOURCE LINE # 19
+
+                        168     ;         key=getchar();
+
+                        169                             ; SOURCE LINE # 20
+
+000012 120000     E     170             LCALL   getchar
+
+000015 8F00       F     171             MOV     key?042,R7
+
+                        172     ;         if(key=='R')
+
+                        173                             ; SOURCE LINE # 21
+
+000017 E500       F     174             MOV     A,key?042
+
+000019 B45215           175             CJNE    A,#052H,?C0003
+
+                        176     ;         {
+
+                        177                             ; SOURCE LINE # 22
+
+                        178     ;             direct=0X01;
+
+                        179                             ; SOURCE LINE # 23
+
+00001C 750001     F     180             MOV     direct?041,#01H
+
+                        181     ;             out=asm(out,direct);/*»ã±à×Ó³ÌÐòµ÷ÓÃ*/
+
+                        182                             ; SOURCE LINE # 24
+
+00001F AD00       F     183             MOV     R5,direct?041
+
+000021 AF00       F     184             MOV     R7,out?040
+
+AX51 MACRO ASSEMBLER  MUTI_ASM                                                              11/06/17 16:14:47 PAGE     4
+
+000023 120000     E     185             LCALL   _asm
+
+000026 8F00       F     186             MOV     out?040,R7
+
+                        187     ;             printf ("Right rotate\n");
+
+                        188                             ; SOURCE LINE # 25
+
+000028 7BFF             189             MOV     R3,#0FFH
+
+00002A 7A00       F     190             MOV     R2,#HIGH (?SC_0)
+
+00002C 7900       F     191             MOV     R1,#LOW (?SC_0)
+
+00002E 120000     E     192             LCALL   _printf
+
+                        193     ;         }
+
+                        194                             ; SOURCE LINE # 26
+
+000031                  195     ?C0003:
+
+                        196     ;         if(key=='L')
+
+                        197                             ; SOURCE LINE # 27
+
+000031 E500       F     198             MOV     A,key?042
+
+000033 B44C15           199             CJNE    A,#04CH,?C0004
+
+                        200     ;         {
+
+                        201                             ; SOURCE LINE # 28
+
+                        202     ;             direct=0X02;
+
+                        203                             ; SOURCE LINE # 29
+
+000036 750002     F     204             MOV     direct?041,#02H
+
+                        205     ;             out=asm(out,direct);/*»ã±à×Ó³ÌÐòµ÷ÓÃ*/
+
+                        206                             ; SOURCE LINE # 30
+
+000039 AD00       F     207             MOV     R5,direct?041
+
+00003B AF00       F     208             MOV     R7,out?040
+
+00003D 120000     E     209             LCALL   _asm
+
+000040 8F00       F     210             MOV     out?040,R7
+
+                        211     ;             printf ("Left rotate\n");
+
+                        212                             ; SOURCE LINE # 31
+
+000042 7BFF             213             MOV     R3,#0FFH
+
+000044 7A00       F     214             MOV     R2,#HIGH (?SC_14)
+
+000046 7900       F     215             MOV     R1,#LOW (?SC_14)
+
+000048 120000     E     216             LCALL   _printf
+
+                        217     ;         }
+
+                        218                             ; SOURCE LINE # 32
+
+00004B                  219     ?C0004:
+
+                        220     ;         printf("%bx\n",out);
+
+                        221                             ; SOURCE LINE # 33
+
+00004B 7BFF             222             MOV     R3,#0FFH
+
+00004D 7A00       F     223             MOV     R2,#HIGH (?SC_27)
+
+00004F 7900       F     224             MOV     R1,#LOW (?SC_27)
+
+000051 850000     E     225             MOV     ?_printf?BYTE+03H,out?040
+
+000054 120000     E     226             LCALL   _printf
+
+                        227     ;     }
+
+                        228                             ; SOURCE LINE # 34
+
+000057 80B9             229             SJMP    ?C0001
+
+                        230     ; END OF main
+
+                        231     
+
+                        232             END
+
+AX51 MACRO ASSEMBLER  MUTI_ASM                                                              11/06/17 16:14:47 PAGE     5
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E                            T Y P E  V A L U E     ATTRIBUTES
+
+?_PRINTF?BYTE . . . . . . . . . .  D  ADDR  -------       EXT
+?BI?MUTI_ASM. . . . . . . . . . .  B  SEG   000001H       REL=UNIT, ALN=BIT
+?C0001. . . . . . . . . . . . . .  C  ADDR  0012H     R   SEG=?PR?MAIN?MUTI_ASM
+?C0003. . . . . . . . . . . . . .  C  ADDR  0031H     R   SEG=?PR?MAIN?MUTI_ASM
+?C0004. . . . . . . . . . . . . .  C  ADDR  004BH     R   SEG=?PR?MAIN?MUTI_ASM
+?C_STARTUP. . . . . . . . . . . .  C  ADDR  -------       EXT
+?CO?MUTI_ASM. . . . . . . . . . .  AB SEG   000020H       REL=UNIT, ALN=BYTE
+?DT?MAIN?MUTI_ASM . . . . . . . .  D  SEG   000003H       REL=UNIT, ALN=BYTE
+?MAIN?BYTE. . . . . . . . . . . .  D  ADDR  0000H     R   SEG=?DT?MAIN?MUTI_ASM
+?PR?MAIN?MUTI_ASM . . . . . . . .  C  SEG   000059H       REL=UNIT, ALN=BYTE
+?SC_0 . . . . . . . . . . . . . .  VC ADDR  0000H     R   SEG=?CO?MUTI_ASM
+?SC_14. . . . . . . . . . . . . .  VC ADDR  000EH     R   SEG=?CO?MUTI_ASM
+?SC_27. . . . . . . . . . . . . .  VC ADDR  001BH     R   SEG=?CO?MUTI_ASM
+_ASM. . . . . . . . . . . . . . .  C  ADDR  -------       EXT
+_PRINTF . . . . . . . . . . . . .  C  ADDR  -------       EXT
+AC. . . . . . . . . . . . . . . .  B  ADDR  00D0H.6   A   
+ACC . . . . . . . . . . . . . . .  D  ADDR  00E0H     A   
+B . . . . . . . . . . . . . . . .  D  ADDR  00F0H     A   
+C_T2. . . . . . . . . . . . . . .  B  ADDR  00C8H.1   A   
+CP_RL2. . . . . . . . . . . . . .  B  ADDR  00C8H.0   A   
+CY. . . . . . . . . . . . . . . .  B  ADDR  00D0H.7   A   
+DIRECT?041. . . . . . . . . . . .  D  ADDR  0001H     R   SEG=?DT?MAIN?MUTI_ASM
+DPH . . . . . . . . . . . . . . .  D  ADDR  0083H     A   
+DPL . . . . . . . . . . . . . . .  D  ADDR  0082H     A   
+EA. . . . . . . . . . . . . . . .  B  ADDR  00A8H.7   A   
+ES. . . . . . . . . . . . . . . .  B  ADDR  00A8H.4   A   
+ET0 . . . . . . . . . . . . . . .  B  ADDR  00A8H.1   A   
+ET1 . . . . . . . . . . . . . . .  B  ADDR  00A8H.3   A   
+ET2 . . . . . . . . . . . . . . .  B  ADDR  00A8H.5   A   
+EX0 . . . . . . . . . . . . . . .  B  ADDR  00A8H.0   A   
+EX1 . . . . . . . . . . . . . . .  B  ADDR  00A8H.2   A   
+EXEN2 . . . . . . . . . . . . . .  B  ADDR  00C8H.3   A   
+EXF2. . . . . . . . . . . . . . .  B  ADDR  00C8H.6   A   
+F0. . . . . . . . . . . . . . . .  B  ADDR  00D0H.5   A   
+GETCHAR . . . . . . . . . . . . .  C  ADDR  -------       EXT
+IE. . . . . . . . . . . . . . . .  D  ADDR  00A8H     A   
+IE0 . . . . . . . . . . . . . . .  B  ADDR  0088H.1   A   
+IE1 . . . . . . . . . . . . . . .  B  ADDR  0088H.3   A   
+INT0. . . . . . . . . . . . . . .  B  ADDR  00B0H.2   A   
+INT1. . . . . . . . . . . . . . .  B  ADDR  00B0H.3   A   
+IP. . . . . . . . . . . . . . . .  D  ADDR  00B8H     A   
+IT0 . . . . . . . . . . . . . . .  B  ADDR  0088H.0   A   
+IT1 . . . . . . . . . . . . . . .  B  ADDR  0088H.2   A   
+KEY?042 . . . . . . . . . . . . .  D  ADDR  0002H     R   SEG=?DT?MAIN?MUTI_ASM
+MAIN. . . . . . . . . . . . . . .  C  ADDR  0000H     R   SEG=?PR?MAIN?MUTI_ASM
+MUTI_ASM. . . . . . . . . . . . .  -- ----  -------       
+OUT?040 . . . . . . . . . . . . .  D  ADDR  0000H     R   SEG=?DT?MAIN?MUTI_ASM
+OV. . . . . . . . . . . . . . . .  B  ADDR  00D0H.2   A   
+P . . . . . . . . . . . . . . . .  B  ADDR  00D0H.0   A   
+P0. . . . . . . . . . . . . . . .  D  ADDR  0080H     A   
+P1. . . . . . . . . . . . . . . .  D  ADDR  0090H     A   
+P2. . . . . . . . . . . . . . . .  D  ADDR  00A0H     A   
+P3. . . . . . . . . . . . . . . .  D  ADDR  00B0H     A   
+PCON. . . . . . . . . . . . . . .  D  ADDR  0087H     A   
+PS. . . . . . . . . . . . . . . .  B  ADDR  00B8H.4   A   
+PSW . . . . . . . . . . . . . . .  D  ADDR  00D0H     A   
+PT0 . . . . . . . . . . . . . . .  B  ADDR  00B8H.1   A   
+PT1 . . . . . . . . . . . . . . .  B  ADDR  00B8H.3   A   
+PT2 . . . . . . . . . . . . . . .  B  ADDR  00B8H.5   A   
+PX0 . . . . . . . . . . . . . . .  B  ADDR  00B8H.0   A   
+AX51 MACRO ASSEMBLER  MUTI_ASM                                                              11/06/17 16:14:47 PAGE     6
+
+PX1 . . . . . . . . . . . . . . .  B  ADDR  00B8H.2   A   
+RB8 . . . . . . . . . . . . . . .  B  ADDR  0098H.2   A   
+RCAP2H. . . . . . . . . . . . . .  D  ADDR  00CBH     A   
+RCAP2L. . . . . . . . . . . . . .  D  ADDR  00CAH     A   
+RCLK. . . . . . . . . . . . . . .  B  ADDR  00C8H.5   A   
+RD. . . . . . . . . . . . . . . .  B  ADDR  00B0H.7   A   
+REN . . . . . . . . . . . . . . .  B  ADDR  0098H.4   A   
+RI. . . . . . . . . . . . . . . .  B  ADDR  0098H.0   A   
+RS0 . . . . . . . . . . . . . . .  B  ADDR  00D0H.3   A   
+RS1 . . . . . . . . . . . . . . .  B  ADDR  00D0H.4   A   
+RXD . . . . . . . . . . . . . . .  B  ADDR  00B0H.0   A   
+SBUF. . . . . . . . . . . . . . .  D  ADDR  0099H     A   
+SCON. . . . . . . . . . . . . . .  D  ADDR  0098H     A   
+SM0 . . . . . . . . . . . . . . .  B  ADDR  0098H.7   A   
+SM1 . . . . . . . . . . . . . . .  B  ADDR  0098H.6   A   
+SM2 . . . . . . . . . . . . . . .  B  ADDR  0098H.5   A   
+SP. . . . . . . . . . . . . . . .  D  ADDR  0081H     A   
+T0. . . . . . . . . . . . . . . .  B  ADDR  00B0H.4   A   
+T1. . . . . . . . . . . . . . . .  B  ADDR  00B0H.5   A   
+T2. . . . . . . . . . . . . . . .  B  ADDR  0090H.0   A   
+T2CON . . . . . . . . . . . . . .  D  ADDR  00C8H     A   
+T2EX. . . . . . . . . . . . . . .  B  ADDR  0090H.1   A   
+TB8 . . . . . . . . . . . . . . .  B  ADDR  0098H.3   A   
+TCLK. . . . . . . . . . . . . . .  B  ADDR  00C8H.4   A   
+TCON. . . . . . . . . . . . . . .  D  ADDR  0088H     A   
+TF0 . . . . . . . . . . . . . . .  B  ADDR  0088H.5   A   
+TF1 . . . . . . . . . . . . . . .  B  ADDR  0088H.7   A   
+TF2 . . . . . . . . . . . . . . .  B  ADDR  00C8H.7   A   
+TH0 . . . . . . . . . . . . . . .  D  ADDR  008CH     A   
+TH1 . . . . . . . . . . . . . . .  D  ADDR  008DH     A   
+TH2 . . . . . . . . . . . . . . .  D  ADDR  00CDH     A   
+TI. . . . . . . . . . . . . . . .  B  ADDR  0098H.1   A   
+TL0 . . . . . . . . . . . . . . .  D  ADDR  008AH     A   
+TL1 . . . . . . . . . . . . . . .  D  ADDR  008BH     A   
+TL2 . . . . . . . . . . . . . . .  D  ADDR  00CCH     A   
+TMOD. . . . . . . . . . . . . . .  D  ADDR  0089H     A   
+TR0 . . . . . . . . . . . . . . .  B  ADDR  0088H.4   A   
+TR1 . . . . . . . . . . . . . . .  B  ADDR  0088H.6   A   
+TR2 . . . . . . . . . . . . . . .  B  ADDR  00C8H.2   A   
+TXD . . . . . . . . . . . . . . .  B  ADDR  00B0H.1   A   
+VAL . . . . . . . . . . . . . . .  B  ADDR  0000H.0   R   SEG=?BI?MUTI_ASM
+WR. . . . . . . . . . . . . . . .  B  ADDR  00B0H.6   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S).

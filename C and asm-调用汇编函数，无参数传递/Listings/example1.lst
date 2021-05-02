@@ -1,0 +1,38 @@
+AX51 MACRO ASSEMBLER  EXAMPLE1                                                              03/18/20 21:41:22 PAGE     1
+
+
+MACRO ASSEMBLER AX51 V3.15.3.0
+OBJECT MODULE PLACED IN .\Objects\example1.obj
+ASSEMBLER INVOKED BY: G:\Keil_v5\C51\BIN\AX51.EXE example1.a51 SET(SMALL) DEBUG PRINT(.\Listings\example1.lst) OBJECT(.\
+                      Objects\example1.obj) EP
+
+LOC    OBJ             LINE     SOURCE
+
+------                    1     ?PR?DELAY100 SEGMENT CODE
+                          2         PUBLIC DELAY100
+------                    3             RSEG ?PR?DELAY100
+000000                    4                 DELAY100:
+000000 7F0A               5                 MOV R7,#10
+000002                    6                 DEL:
+000002 7E14               7                 MOV R6,#20
+000004 DEFE               8                 DJNZ R6,$
+000006 DFFA               9                 DJNZ R7,DEL
+000008 22                10                 RET
+                         11                 END
+AX51 MACRO ASSEMBLER  EXAMPLE1                                                              03/18/20 21:41:22 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E                       T Y P E  V A L U E     ATTRIBUTES
+
+?PR?DELAY100 . . . . . . . .  C  SEG   000009H       REL=UNIT, ALN=BYTE
+DEL. . . . . . . . . . . . .  C  ADDR  0002H     R   SEG=?PR?DELAY100
+DELAY100 . . . . . . . . . .  C  ADDR  0000H     R   SEG=?PR?DELAY100
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S).

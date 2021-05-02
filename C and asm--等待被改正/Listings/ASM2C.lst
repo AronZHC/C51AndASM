@@ -1,0 +1,43 @@
+C51 COMPILER V9.57.0.0   ASM2C                                                             03/18/2020 21:33:02 PAGE 1   
+
+
+C51 COMPILER V9.57.0.0, COMPILATION OF MODULE ASM2C
+OBJECT MODULE PLACED IN .\Objects\ASM2C.obj
+COMPILER INVOKED BY: G:\Keil_v5\C51\BIN\C51.EXE ASM2C.c OMF2 OPTIMIZE(8,SPEED) BROWSE DEBUG PRINT(.\Listings\ASM2C.lst) 
+                    -TABS(2) OBJECT(.\Objects\ASM2C.obj)
+
+line level    source
+
+   1          extern void A_FUNC(int *);
+   2          
+   3          void c_func(int *iptr)
+   4          {
+   5   1      *iptr = 0x9988;
+   6   1      }
+   7              void main(void)
+   8              {
+   9   1          idata int min = 0x2211;
+  10   1              while(1)
+  11   1              {
+  12   2              A_FUNC(&min);
+  13   2              min = 0x6655;
+  14   2              }
+  15   1          }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     33    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----       2
+   BIT SIZE         =   ----    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

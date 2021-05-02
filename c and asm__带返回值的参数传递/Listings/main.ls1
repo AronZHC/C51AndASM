@@ -1,0 +1,86 @@
+AX51 MACRO ASSEMBLER  MAIN                                                                  01/06/21 22:11:49 PAGE     1
+
+
+MACRO ASSEMBLER AX51 V3.15.3.0
+OBJECT MODULE PLACED IN .\Objects\main.OBJ
+ASSEMBLER INVOKED BY: I:\[20200615]KeilC51\C51\BIN\AX51.EXE .\Objects\main.src PR(.\Listings\main.ls1) EP DEBUG
+
+LOC    OBJ             LINE     SOURCE
+
+                          1     ; .\Objects\main.SRC generated from: main.c
+                          2     ; COMPILER INVOKED BY:
+                          3     ;        I:\[20200615]KeilC51\C51\BIN\C51.EXE main.c OMF2 ROM(SMALL) OPTIMIZE(8,SPEED) B
+                               ROWSE DEBUG PRINT(.\Listings\main.lst) TABS(2) SRC(.\Objects\main.SRC)
+                          4     
+                          5     
+                          6     NAME    MAIN
+                          7     
+------                    8     ?PR?_example?MAIN    SEGMENT CODE INBLOCK 
+------                    9     ?PR?main?MAIN        SEGMENT CODE INBLOCK 
+                         10             EXTRN   CODE (?C_STARTUP)
+                         11             PUBLIC  main
+                         12             PUBLIC  _example
+                         13     ; unsigned int example(unsigned char i)
+                         14     
+------                   15             RSEG  ?PR?_example?MAIN
+000000                   16     _example:
+                         17             USING   0
+                         18                             ; SOURCE LINE # 1
+                         19     ;---- Variable 'i?040' assigned to Register 'R7' ----
+                         20     ; {return i*i;}
+                         21                             ; SOURCE LINE # 2
+000000 EF                22             MOV     A,R7
+000001 F5F0              23             MOV     B,A
+000003 A4                24             MUL     AB
+000004 FF                25             MOV     R7,A
+000005 AEF0              26             MOV     R6,B
+000007 22                27             RET     
+                         28     ; END OF _example
+                         29     
+                         30     ; 
+                         31     ; main()
+                         32     
+------                   33             RSEG  ?PR?main?MAIN
+000000                   34     main:
+                         35             USING   0
+                         36                             ; SOURCE LINE # 4
+                         37     ; {
+                         38                             ; SOURCE LINE # 5
+                         39     ; example(80);
+                         40                             ; SOURCE LINE # 6
+000000 7F50              41             MOV     R7,#050H
+000002 1100       F      42             ACALL   _example
+                         43     ;     #pragma asm
+                         44     ;     DJNZ R7,$
+000004 DFFE              45               DJNZ R7,$
+                         46     ;     DJNZ R6,$
+000006 DEFE              47               DJNZ R6,$
+000008                   48     ?C0002:
+                         49     ;     #pragma endasm
+                         50     ;     while(1);   
+                         51                             ; SOURCE LINE # 11
+000008 80FE              52             SJMP    ?C0002
+                         53     ; END OF main
+                         54     
+                         55             END
+AX51 MACRO ASSEMBLER  MAIN                                                                  01/06/21 22:11:49 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E                            T Y P E  V A L U E     ATTRIBUTES
+
+?C0002. . . . . . . . . . . . . .  C  ADDR  0008H     R   SEG=?PR?MAIN?MAIN
+?C_STARTUP. . . . . . . . . . . .  C  ADDR  -------       EXT
+?PR?_EXAMPLE?MAIN . . . . . . . .  C  SEG   000008H       REL=INBLOCK, ALN=BYTE
+?PR?MAIN?MAIN . . . . . . . . . .  C  SEG   00000AH       REL=INBLOCK, ALN=BYTE
+_EXAMPLE. . . . . . . . . . . . .  C  ADDR  0000H     R   SEG=?PR?_EXAMPLE?MAIN
+B . . . . . . . . . . . . . . . .  D  ADDR  00F0H     A   
+MAIN. . . . . . . . . . . . . . .  C  ADDR  0000H     R   SEG=?PR?MAIN?MAIN
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S).

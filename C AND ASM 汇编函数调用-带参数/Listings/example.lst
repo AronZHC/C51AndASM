@@ -1,0 +1,35 @@
+AX51 MACRO ASSEMBLER  EXAMPLE                                                               03/18/20 21:43:09 PAGE     1
+
+
+MACRO ASSEMBLER AX51 V3.15.3.0
+OBJECT MODULE PLACED IN .\Objects\example.obj
+ASSEMBLER INVOKED BY: G:\Keil_v5\C51\BIN\AX51.EXE example.a51 SET(SMALL) DEBUG PRINT(.\Listings\example.lst) OBJECT(.\Ob
+                      jects\example.obj) EP
+
+LOC    OBJ             LINE     SOURCE
+
+------                    1     ?PR?_DELAY?DELAY SEGMENT CODE
+                          2         PUBLIC _DELAY
+------                    3             RSEG ?PR?_DELAY?DELAY
+000000                    4                 _DELAY:
+000000 DCFE               5                 DJNZ R4,$
+000002 DDFC               6                 DJNZ R5,_DELAY
+000004 DFFE               7                 DJNZ R7,$
+000006 22                 8                 RET
+                          9                 END
+AX51 MACRO ASSEMBLER  EXAMPLE                                                               03/18/20 21:43:09 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E                           T Y P E  V A L U E     ATTRIBUTES
+
+?PR?_DELAY?DELAY . . . . . . . .  C  SEG   000007H       REL=UNIT, ALN=BYTE
+_DELAY . . . . . . . . . . . . .  C  ADDR  0000H     R   SEG=?PR?_DELAY?DELAY
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S).
