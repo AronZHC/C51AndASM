@@ -1,6 +1,0 @@
-".\Objects\STARTUP.obj",
-".\Objects\main.obj",
-"I:\[20200615]KeilC51\C51\LIB\C51S.LIB" 
-TO ".\Objects\c and asm" 
-
-PRINT(".\Listings\c and asm.map")

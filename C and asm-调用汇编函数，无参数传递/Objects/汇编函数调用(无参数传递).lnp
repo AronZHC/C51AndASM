@@ -1,6 +1,0 @@
-".\Objects\STARTUP.obj",
-".\Objects\main.obj",
-".\Objects\example1.obj" 
-TO ".\Objects\汇编函数调用(无参数传递)" 
-
-PRINT(".\Listings\汇编函数调用(无参数传递).map")
